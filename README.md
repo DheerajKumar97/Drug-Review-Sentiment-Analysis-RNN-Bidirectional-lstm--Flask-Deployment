@@ -9,7 +9,7 @@
 https://drive.google.com/drive/folders/1-vTSZrQ_Jsn1qv404FGjkdoZtWgxaZrP?usp=sharing
 
 <br>
-Heroku App : https://drugreviewsentimentanalysis.herokuapp.com/
+Heroku App : https://drugreviewsentimentanalysisrnn.herokuapp.com/
 
 # Table Of Contents
 - [PROJECT GOAL](#PROJECT-GOAL)
