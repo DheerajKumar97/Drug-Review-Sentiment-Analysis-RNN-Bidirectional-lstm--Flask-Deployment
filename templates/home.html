@@ -1,0 +1,368 @@
+<html>
+<head>
+<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/4.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  
+
+<div>  
+<nav class="navbar navbar-expand-sm bg-dark fixed-top">
+  <a class="navbar-brand" href="#"><b>Drug Review Sentiment Analysis</b></a>
+  <a class="navbar-brand" href="#"><b><font size="2">BY DHEERAJ KUMAR</font></b></a>
+</nav>
+</div>
+
+</head>
+<br>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+
+.background1 
+{
+  background: #060C1F;
+  width: 1200px;
+  height: 600px;
+}
+
+.background2
+{
+  width: 1200px;
+  height: 550px;
+  background: #151B54;
+  border-radius: 500px 0px 500px 0px;
+}
+
+.background3
+{
+  width: 1000px;
+  height: 550px;
+  background: #fbfbfb;
+  border-radius: 500px 0px 500px 0px;
+  border-right: 50px solid #ffffff;
+  border-left: 50px solid #ffffff;
+  margin: auto;
+  box-shadow: inset 0px 0px 100px #00000017;
+}
+
+.content 
+{
+  width: 550px;
+  margin: auto;
+  position: relative;
+  top: 80px;
+  font-family: 'Roboto', sans-serif;
+  color: black;
+}
+
+.title
+{
+  text-align: right;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.subtitle
+{
+  text-align: right;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  font-size: 15px;
+  color: #272727;
+  font-weight: bold;
+}
+
+
+
+.website
+{
+  font-weight: bold;
+  margin-top: 50px;
+}
+
+.text::-webkit-scrollbar 
+{
+  width: 1px; background: transparent !important; 
+  border: 0px !important;
+} 
+
+.text::-webkit-scrollbar-track 
+{
+  background: transparent !important;
+} 
+
+.text::-webkit-scrollbar-thumb {
+  background: #3fbd6c /*COLOR FONDO SCROLL*/ !important; 
+  border: 0px !important;
+}
+.social
+{
+  width: 300px;
+  height: 30px;
+  display: inline-block;
+  margin-left: 1070px;
+  position: relative;
+  top: -80px;
+  text-align: right;
+  padding: 15px;
+}
+
+.social img
+{
+  height: 35px;
+  border-radius: 10px 0px 10px 0px;
+}
+
+.social img
+{
+  background: #151B54;
+  margin-left: 5px;
+}
+
+.social img:hover
+{
+  background: blue;
+}
+</style>
+<style>
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: #060C1F;
+  font-family: 'Almarai', sans-serif;
+}
+
+.wrapper {
+  height: 20vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  overflow: hidden;
+}
+
+.main-div {
+  position: relative;
+  margin: 5px;
+  background-color: transparent;
+}
+
+.main-div1::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 50%;
+  height: 50%;
+  -webkit-box-shadow: 0 0 17px 3px #ffff01,0 0 4px 2px #ffff01;
+          box-shadow: 0 0 17px 3px #ffff01,0 0 4px 2px #ffff01;
+  z-index: -1;
+  -webkit-animation-name: yellow-shadow;
+          animation-name: yellow-shadow;
+  -webkit-animation-timing-function: ease;
+          animation-timing-function: ease;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+
+.main-div1::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 50%;
+  height: 50%;
+  -webkit-box-shadow: 0 0 17px 3px #0ff,0 0 4px 2px #0ff;
+          box-shadow: 0 0 17px 3px #0ff,0 0 4px 2px #0ff;
+  z-index: -1;
+  -webkit-animation-name: cyan-shadow;
+          animation-name: cyan-shadow;
+  -webkit-animation-timing-function: ease;
+          animation-timing-function: ease;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+
+
+
+
+h1 {
+  font-size: 30px;
+  margin: 0;
+  position: relative;
+  z-index: 3;
+  padding: 20px;
+  background-color: #060C1F;
+  color: #fff;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+
+@-webkit-keyframes yellow-shadow {
+  0% {
+    top: 0;
+    left: 0;
+  }
+  25% {
+    top: 50%;
+    left: 0;
+  }
+  50% {
+    top: 50%;
+    left: 50%;
+  }
+  75% {
+    top: 0;
+    left: 50%;
+  }
+  100% {
+    top: 0;
+    left: 0;
+  }
+}
+
+@keyframes yellow-shadow {
+  0% {
+    top: 0;
+    left: 0;
+  }
+  25% {
+    top: 50%;
+    left: 0;
+  }
+  50% {
+    top: 50%;
+    left: 50%;
+  }
+  75% {
+    top: 0;
+    left: 50%;
+  }
+  100% {
+    top: 0;
+    left: 0;
+  }
+}
+
+@-webkit-keyframes cyan-shadow {
+  0% {
+    right: 0;
+    bottom: 0;
+  }
+  25% {
+    right: 0;
+    bottom: 50%;
+  }
+  50% {
+    right: 50%;
+    bottom: 50%;
+  }
+  75% {
+    right: 50%;
+    bottom: 0;
+  }
+  100% {
+    right: 0;
+    bottom: 0;
+  }
+}
+    
+</style>
+<br><br>
+<div class="background1">
+  <div class="background2">
+    <div class="background3">
+      <div class="content">
+	<center><div class="monospace"><b>Helo Iam</b></div></center>
+        <center><div class="monospace"><font size="5"><b>Dheeraj Kumar</b></font></div></center>
+        <br>
+	<p style="text-align:left;"><font size="5"><b>Project Description</b></font></p>
+	
+        <div class="text">Sentiment Analysis also known as Opinion Mining refers to the use of natural language
+processing, text analysis to systematically identify, extract, quantify, and study affective
+states and subjective information.</div><br> <div class="text">Sentiment analysis is widely applied to reviews and
+survey responses, online and social media, and healthcare materials for applications that
+range from marketing to customer service to clinical medicine.</div><br>
+<div class="text">In this project, we aim to perform Sentiment Analysis of Drug reviews. Data used
+in this project are online product reviews collected from “amazon.com”. We expect to do
+review-level categorization of review data with promising outcomes.</div>
+        <br><br>
+      </div>
+      </div>
+    </div>
+  </div>
+  <div class="social">
+    
+  </div>
+</div>
+<center><div class="website"><font color="white" size="6"><b>Welcome My Project</b></font></div></center>
+<div class="wrapper">
+    <div class="main-div main-div1">
+      <h1>Drug Review Sentiment Analysis</h1>
+    </div><br>
+<br>
+<body>
+
+<style>
+#ip4 {
+    border-radius: 25px 80px 10px;
+    border: 6px solid #609;
+    padding: 20px; 
+    width: 600px;
+    height: 245px; 
+}
+</style>
+<br>
+  
+
+<br>
+
+	</div>
+	
+
+	<div class="ml-container">
+
+		<center><form action="{{ url_for('predict')}}" method="POST">
+		<h1 class="text-red blink-hard">Enter Your Review Here</h1>
+	
+		<textarea name="review" rows="6" cols="50" required="required" id="ip4"></textarea>
+		<br/>
+<br><br>
+		<input type="submit" class="btn btn-primary btn-lg"  value="predict">
+	<br><br><br><br>
+	</form></center>
+</body>
+ 
+</html>
