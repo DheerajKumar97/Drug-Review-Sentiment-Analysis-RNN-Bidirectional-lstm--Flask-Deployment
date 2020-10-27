@@ -10,12 +10,13 @@ from numpy import array
 
 
 app=Flask(__name__)
-json_file = open('rnn_model.json', 'r')
-loaded_model_json = json_file.read()
-json_file.close()
-model = model_from_json(loaded_model_json)
-model.load_weights("rnn_model.h5")
-model
+model = load_model("rnn_model.h5")
+# json_file = open('rnn_model.json', 'r')
+# loaded_model_json = json_file.read()
+# json_file.close()
+# model = model_from_json(loaded_model_json)
+# model.load_weights("rnn_model.h5")
+
 
 with open('tokenizer.pickle', 'rb') as handle:
     tokenizer = pickle.load(handle)
