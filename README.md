@@ -4,6 +4,10 @@
 
 ![Alt Text](https://github.com/DheerajKumar97/Automated-ML-Application-for-EDA-Streamlit-Deployment--Heroku/blob/master/heroku-.png)
 
+# Original Non Compressed HDF5 Model File LINK
+## Model file compressed because of larger size if you want original file download from below Link
+https://drive.google.com/drive/folders/1-vTSZrQ_Jsn1qv404FGjkdoZtWgxaZrP?usp=sharing
+
 <br>
 Heroku App : https://drugreviewsentimentanalysis.herokuapp.com/
 
