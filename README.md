@@ -49,15 +49,15 @@ Heroku App : https://drugreviewsentimentanalysisrnn.herokuapp.com/
 
 3- Count vectorizer Vectorization
 
-4- Naive Bayes Model Creation
+4- Naive Bayes Modeling
 
 5- tfidf vectorizer Vectorization
 
-6- Logistic Model Creation
+6- Logistic Modeling
 
-7- Word2vec Creation
+7- Keras Tokenization and pad sequence
 
-8- RNN LSTM Model Creation
+8- RNN LSTM Modeling
 
 ##  Details of Variables
 
